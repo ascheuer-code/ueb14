@@ -1,3 +1,9 @@
+/**
+ * ube14 Klasse mit statischen Methoden
+ * 
+ * @author Simon Klasen & Andreas Scheuer
+ * @version 0.1
+ */
 
 public class Lib_String {
 
@@ -11,7 +17,7 @@ public class Lib_String {
         if (!string.toString().isEmpty() && !string.toString().isBlank()) {
             return;
         }
-        throw new IllegalArgumentException(Message.errorEmptyString(fieldname));
+        throw new IllegalArgumentException(Lib_Message.errorEmptyString(fieldname));
     }
 
     /**

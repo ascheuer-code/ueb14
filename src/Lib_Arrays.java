@@ -1,3 +1,10 @@
+/**
+ * ube14 Klasse mit statischen Methoden
+ * 
+ * @author Simon Klasen & Andreas Scheuer
+ * @version 0.1
+ */
+
 public class Lib_Arrays {
 
     /**
@@ -28,7 +35,7 @@ public class Lib_Arrays {
         if (array[index] != null) {
             return;
         }
-        throw new NullPointerException(Message.errorNullPointerArray(index));
+        throw new NullPointerException(Lib_Message.errorNullPointerArray(index));
 
     }
 }

@@ -1,9 +1,20 @@
-
+/**
+ * ueb 14 - Klasse für Uhrzeit
+ * 
+ * @author Simon Klasen & Andreas Scheuer
+ * @version 0.1
+ */
 public class Uhrzeit {
 
     private int stunde;
     private int minute;
 
+    /**
+     * Konstruktor mit 2 Parametern
+     * 
+     * @param stunde für Stundenanzahl
+     * @param minute für Minutenanzahl
+     */
     Uhrzeit(int stunde, int minute) {
 
         setStunde(stunde);
@@ -40,6 +51,9 @@ public class Uhrzeit {
         this.minute = minute;
     }
 
+    /**
+     * @return String
+     */
     @Override
     public String toString() {
 
@@ -49,6 +63,10 @@ public class Uhrzeit {
         return String.format("%2s:%2s Uhr", h, m);
     }
 
+    /**
+     * @param obj
+     * @return boolean
+     */
     @Override
     public boolean equals(Object obj) {
         if (this == obj)

@@ -1,5 +1,12 @@
 import java.text.DecimalFormat;
 
+/**
+ * ube14 Klasse mit statischen Methoden
+ * 
+ * @author Simon Klasen & Andreas Scheuer
+ * @version 0.1
+ */
+
 public class Lib_Digits {
 
     /**
@@ -16,7 +23,7 @@ public class Lib_Digits {
         if (value.doubleValue() >= min.doubleValue() && value.doubleValue() <= max.doubleValue()) {
             return;
         }
-        throw new IllegalArgumentException(Message.errorWrongValueSpan(min, max, value, fieldname));
+        throw new IllegalArgumentException(Lib_Message.errorWrongValueSpan(min, max, value, fieldname));
     }
 
     /**
@@ -30,7 +37,7 @@ public class Lib_Digits {
         if (value.doubleValue() >= min.doubleValue()) {
             return;
         }
-        throw new IllegalArgumentException(Message.errorWrongValueMin(min, value, fieldname));
+        throw new IllegalArgumentException(Lib_Message.errorWrongValueMin(min, value, fieldname));
     }
 
     /**
@@ -44,7 +51,7 @@ public class Lib_Digits {
         if (value.doubleValue() <= max.doubleValue()) {
             return;
         }
-        throw new IllegalArgumentException(Message.errorWrongValueMax(max, value, fieldname));
+        throw new IllegalArgumentException(Lib_Message.errorWrongValueMax(max, value, fieldname));
     }
 
     /**

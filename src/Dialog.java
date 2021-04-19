@@ -1,6 +1,15 @@
-
+/**
+ * ueb 14 - Dialogklasse
+ * 
+ * @author Simon Klasen & Andreas Scheuer
+ * @version 0.1
+ */
 public class Dialog {
-    public static void main(String[] args){
+
+    /**
+     * @param args
+     */
+    public static void main(String[] args) {
         Mitarbeiter m = new Mitarbeiter("Max", "Mustermann", "max@htwsaar.de");
 
         Uhrzeit u = new Uhrzeit(23, 54);

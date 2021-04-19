@@ -1,5 +1,11 @@
+/**
+ * ube14 Klasse mit statischen Methoden
+ * 
+ * @author Simon Klasen & Andreas Scheuer
+ * @version 0.1
+ */
 
-public class Message {
+public class Lib_Message {
 
     /**
      * @param min

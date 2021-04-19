@@ -1,5 +1,11 @@
-
 import java.util.ArrayList;
+
+/**
+ * ueb 14 - Klasse für Raum
+ * 
+ * @author Simon Klasen & Andreas Scheuer
+ * @version 0.1
+ */
 
 public class Raum {
 
@@ -9,6 +15,14 @@ public class Raum {
 
     private ArrayList<Reservierung> reservierung;
 
+    /**
+     * Konstruktor mit 3 Parametern
+     * 
+     * @param geb   für Gebäude
+     * @param etage für Etage
+     * @param raum  für Raum
+     */
+
     public Raum(int geb, int etage, int raum) {
         this.geb = geb;
         this.etage = etage;
@@ -17,42 +31,72 @@ public class Raum {
 
     }
 
+    /**
+     * Methode zum Hinzufügen einer Reservierung
+     * 
+     * @param reservierung Objekt der Klasse Reservierung
+     */
     public void addReservierung(Reservierung reservierung) {
         this.reservierung.add(reservierung);
     }
 
+    /**
+     * @return int
+     */
     public int getGeb() {
         return geb;
     }
 
+    /**
+     * @param geb
+     */
     public void setGeb(int geb) {
         Lib_Digits.checkSpan(0, Integer.MAX_VALUE, geb, "geb");
         this.geb = geb;
     }
 
+    /**
+     * @return int
+     */
     public int getEtage() {
         return etage;
     }
 
+    /**
+     * @param etage
+     */
     public void setEtage(int etage) {
         Lib_Digits.checkSpan(0, Integer.MAX_VALUE, etage, "etage");
         this.etage = etage;
     }
 
+    /**
+     * @return int
+     */
     public int getRaum() {
         return raum;
     }
 
+    /**
+     * @param raum
+     */
     public void setRaum(int raum) {
         Lib_Digits.checkSpan(0, Integer.MAX_VALUE, raum, "raum");
         this.raum = raum;
     }
 
+    /**
+     * @param index
+     * @return Reservierung
+     */
     public Reservierung getReservierung(int index) {
         Lib_Arrays.checkNullPointer(reservierung.toArray(), index);
         return reservierung.get(index);
     }
 
+    /**
+     * @return int anzahl der Reservierungen die ein Raum besitzt
+     */
     public int getAnzahlReservierungen() {
 
         return Lib_Arrays.countIndex(reservierung.toArray());
