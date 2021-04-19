@@ -8,9 +8,15 @@
 public class Lib_Message {
 
     /**
-     * @param min
-     * @param max
-     * @return String
+     * Fehlermeldung für Lib_Digits checkSpan()
+     * 
+     * @param <T>       beliebige Zahl
+     * @param <K>       beliebiger String
+     * 
+     * @param min       Minimalwert
+     * @param max       Maximalwert
+     * @param fieldname Feldname des Attributes
+     * @return String Fehlermeldung
      */
     public static <T> String errorWrongValueSpan(T min, T max, T value, T fieldname) {
         return String.format("Der eingegebene Wert bei %s ist: %s er unterschreitet %s oder überschreitet %s",
@@ -18,9 +24,14 @@ public class Lib_Message {
     }
 
     /**
-     * @param min
-     * @param fieldname
-     * @return String
+     * Fehlermeldung für Lib_Digits checkMin()
+     * 
+     * @param <T>       beliebige Zahl
+     * @param <K>       beliebiger String
+     * 
+     * @param min       Minimalwert
+     * @param fieldname Feldname des Attributes
+     * @return String Fehlermeldung
      */
     public static <T> String errorWrongValueMin(T min, T value, T fieldname) {
         return String.format("Der eingegebene Wert bei %s ist: %s er unterschreitet %s", fieldname.toString(),
@@ -28,9 +39,14 @@ public class Lib_Message {
     }
 
     /**
-     * @param max
-     * @param fieldname
-     * @return String
+     * Fehlermeldung für Lib_Digits checkMax()
+     * 
+     * @param <T>       beliebige Zahl
+     * @param <K>       beliebiger String
+     * 
+     * @param max       Maximalwert
+     * @param fieldname Feldname des Attributes
+     * @return String Fehlermeldung
      */
     public static <T> String errorWrongValueMax(T max, T value, T fieldname) {
         return String.format("Der eingegebene Wert bei %s ist: %s überschreitet %s", fieldname.toString(),
@@ -38,19 +54,27 @@ public class Lib_Message {
     }
 
     /**
-     * @param fieldname
-     * @return String
+     * Fehlermeldung für Lib_String checkIfNullOrEmpty()
+     * 
+     * @param <K>       beliebiger String
+     * 
+     * @param fieldname Feldname des Attributes
+     * @return String Fehlermeldung
      */
-    public static <T> String errorEmptyString(T fieldname) {
+    public static <K> String errorEmptyString(K fieldname) {
         return String.format("Das Feld %s darf nicht leer sein", fieldname.toString());
     }
 
     /**
-     * @param index
-     * @return String
+     * Fehlermeldung für Lib_Arrays checkNullPointer()
+     * 
+     * @param <T>   beliebige Zahl
+     * 
+     * @param index Index der überprüft wurde
+     * @return String Fehlermeldung
      */
-    public static String errorNullPointerArray(int index) {
-        return String.format("Der angegeben Index %d ist nicht belegt", index);
+    public static <T> String errorNullPointerArray(T index) {
+        return String.format("Der angegeben Index %s ist nicht belegt", index.toString());
     }
 
 }

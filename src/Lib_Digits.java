@@ -12,8 +12,8 @@ public class Lib_Digits {
     /**
      * Prüft ob sich der Wert sich zwischen zwei Werten befindet
      * 
-     * @param <T>
-     * @param <K>
+     * @param <T>   beliebige Zahl
+     * @param <K>   beliebiger String
      * 
      * @param min   Mindest Wert
      * @param max   Maximal Wert
@@ -29,6 +29,9 @@ public class Lib_Digits {
     /**
      * Prüft ob sich der Wert über dem min befindet
      * 
+     * @param <T>    beliebige Zahl
+     * @param <K>    beliebiger String
+     * 
      * @param min    Mindest Wert
      * @param value  Prüfwert
      * @param object zu prüfendes Objekt
@@ -42,6 +45,9 @@ public class Lib_Digits {
 
     /**
      * Prüft ob sich der Wert unter dem max befindet
+     * 
+     * @param <T>    beliebige Zahl
+     * @param <K>    beliebiger String
      * 
      * @param min    Maximal Wert
      * @param value  Prüfwert
@@ -57,6 +63,9 @@ public class Lib_Digits {
     /**
      * Formatiert und wandelt den Integer nach einem bestimmten Format in einen
      * String
+     * 
+     * @param <T>    beliebige Zahl
+     * @param <K>    beliebiger String
      * 
      * @param format Die Stringformatierung
      * @param value  Integer-Wert
