@@ -9,14 +9,9 @@ public class Mitarbeiter extends Person {
 
     }
 
-    /**
-     * @param raum
-     * @param beginn
-     * @param ende
-     * @param bemerkung
-     */
     public void reserviere(Raum raum, Uhrzeit beginn, Uhrzeit ende, String bemerkung) {
 
+        Lib_String.checkIfNullOrEmpty(bemerkung, "bemerkung");
         Reservierung reservierung = new Reservierung(beginn, ende);
         reservierung.setBemerkung(bemerkung);
         reservierung.setMitarbeiter(this);
@@ -25,34 +20,21 @@ public class Mitarbeiter extends Person {
 
     }
 
-    /**
-     * @return String
-     */
     public String getEmail() {
         return email;
     }
 
-    /**
-     * @param email
-     */
     public void setEmail(String email) {
 
-        cs.checkIfNullOrEmpty(email, "E-Mail");
-        this.email = cs.trimmail(email);
+        Lib_String.checkIfNullOrEmpty(email, "email");
+        this.email = Lib_String.RemoveAllWhitespaces(email);
     }
 
-    /**
-     * @return String
-     */
     @Override
     public String toString() {
         return String.format("%s %s (%s)", getVorname(), getNachname(), getEmail());
     }
 
-    /**
-     * @param obj
-     * @return boolean
-     */
     @Override
     public boolean equals(Object obj) {
         if (this == obj)

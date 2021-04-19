@@ -10,48 +10,29 @@ public class Person {
         setNachname(nachname);
     }
 
-    /**
-     * @return String
-     */
     public String getVorname() {
         return vorname;
     }
 
-    /**
-     * @param vorname
-     */
     public void setVorname(String vorname) {
-        cs.checkIfNullOrEmpty(vorname, "Vorname");
-        this.vorname = cs.trimstring(vorname);
+        Lib_String.checkIfNullOrEmpty(vorname, "vorname");
+        this.vorname = Lib_String.AllWhitespaceToOne(vorname);
     }
 
-    /**
-     * @return String
-     */
     public String getNachname() {
         return nachname;
     }
 
-    /**
-     * @param nachname
-     */
     public void setNachname(String nachname) {
-        cs.checkIfNullOrEmpty(nachname, "Nachname");
-        this.nachname = cs.trimstring(nachname);
+        Lib_String.checkIfNullOrEmpty(nachname, "nachname");
+        this.nachname = Lib_String.AllWhitespaceToOne(nachname);
     }
 
-    /**
-     * @return String
-     */
     @Override
     public String toString() {
         return String.format("%s %s", vorname, nachname);
     }
 
-    /**
-     * @param obj
-     * @return boolean
-     */
     @Override
     public boolean equals(Object obj) {
         if (this == obj)
@@ -73,10 +54,5 @@ public class Person {
             return false;
         return true;
     }
-
-    /**
-     * @param obj
-     * @return boolean
-     */
 
 }

@@ -17,70 +17,45 @@ public class Raum {
 
     }
 
-    /**
-     * @param reservierung
-     */
     public void addReservierung(Reservierung reservierung) {
         this.reservierung.add(reservierung);
     }
 
-    /**
-     * @return int
-     */
     public int getGeb() {
         return geb;
     }
 
-    /**
-     * @param geb
-     */
     public void setGeb(int geb) {
+        Lib_Digits.checkSpan(0, Integer.MAX_VALUE, geb, "geb");
         this.geb = geb;
     }
 
-    /**
-     * @return int
-     */
     public int getEtage() {
         return etage;
     }
 
-    /**
-     * @param etage
-     */
     public void setEtage(int etage) {
+        Lib_Digits.checkSpan(0, Integer.MAX_VALUE, etage, "etage");
         this.etage = etage;
     }
 
-    /**
-     * @return int
-     */
     public int getRaum() {
         return raum;
     }
 
-    /**
-     * @param raum
-     */
     public void setRaum(int raum) {
+        Lib_Digits.checkSpan(0, Integer.MAX_VALUE, raum, "raum");
         this.raum = raum;
     }
 
-    /**
-     * @param index
-     * @return Reservierung
-     */
     public Reservierung getReservierung(int index) {
-        cs.checkNullPointer(reservierung.toArray(), index);
+        Lib_Arrays.checkNullPointer(reservierung.toArray(), index);
         return reservierung.get(index);
     }
 
-    /**
-     * @return int
-     */
     public int getAnzahlReservierungen() {
 
-        return cs.countNumbersOfIndex(reservierung.toArray());
+        return Lib_Arrays.countIndex(reservierung.toArray());
     }
 
     /**

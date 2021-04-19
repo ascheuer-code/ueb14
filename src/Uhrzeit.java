@@ -21,7 +21,7 @@ public class Uhrzeit {
      * @param stunde
      */
     public void setStunde(int stunde) {
-        cs.checkValueSpan(0, 23, stunde, "Stunde");
+        Lib_Digits.checkSpan(0, 23, stunde, "stunde");
         this.stunde = stunde;
     }
 
@@ -36,26 +36,19 @@ public class Uhrzeit {
      * @param minute
      */
     public void setMinute(int minute) {
-        cs.checkValueSpan(0, 59, minute, "Minute");
+        Lib_Digits.checkSpan(0, 59, minute, "minute");
         this.minute = minute;
     }
 
-    /**
-     * @return String
-     */
     @Override
     public String toString() {
 
-        String h = cs.numberFormatter("00", stunde);
-        String m = cs.numberFormatter("00", minute);
+        String h = Lib_Digits.numberFormatter("00", stunde);
+        String m = Lib_Digits.numberFormatter("00", minute);
 
         return String.format("%2s:%2s Uhr", h, m);
     }
 
-    /**
-     * @param obj
-     * @return boolean
-     */
     @Override
     public boolean equals(Object obj) {
         if (this == obj)

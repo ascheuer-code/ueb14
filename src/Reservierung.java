@@ -31,8 +31,8 @@ public class Reservierung {
      * @param bemerkung
      */
     public void setBemerkung(String bemerkung) {
-        cs.checkIfNullOrEmpty(bemerkung, "Bemerkung");
-        this.bemerkung = bemerkung;
+        Lib_String.checkIfNullOrEmpty(bemerkung, "Bemerkung");
+        this.bemerkung = Lib_String.AllWhitespaceToOne(bemerkung);
     }
 
     /**
