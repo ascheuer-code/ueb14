@@ -13,7 +13,7 @@ public class Lib_String {
      * @param string Der zu prüfende String
      */
 
-    public static <T> void checkIfNullOrEmpty(T string, T fieldname) {
+    public static void checkIfNullOrEmpty(String string, String fieldname) {
         if (!string.toString().isEmpty() && !string.toString().isBlank()) {
             return;
         }
