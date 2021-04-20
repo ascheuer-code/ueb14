@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Lib_Dialog {
 
     private static final int ENDE = 0;
+    private int option = -1;
 
     private Scanner input;
 
@@ -34,16 +35,16 @@ public class Lib_Dialog {
         }
     }
 
-    public int einlesenFunktion(Arraylist options) {
+    public int einlesenFunktion(ArrayList<String> options) {
 
-        Stringbuilder sb = new Stringbuilder();
+        StringBuilder sb = new Stringbuilder();
+        int optioncounter = 0;
 
-        for (ArrayList arrayList : ArrayList) {
+        for (String string : options) {
+            optioncounter++;
 
+            sb.append(str)
         }
-
-        return input.nextInt();
-
     }
 
     public void ausfuehrenFunktion(int option) {
