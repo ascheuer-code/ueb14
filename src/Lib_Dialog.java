@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -7,16 +8,16 @@ public class Lib_Dialog {
 
     private Scanner input;
 
-    public Lib_Dialog() {
+    public Lib_Dialog(ArrayList menue) {
         input = new Scanner(System.in);
+
     }
 
     /**
      * Eigentliche Startmethode
      */
 
-    public void start(String options) {
-        int option = -1;
+    public void start() {
 
         while (option != ENDE) {
             try {
@@ -33,7 +34,13 @@ public class Lib_Dialog {
         }
     }
 
-    public int einlesenFunktion() {
+    public int einlesenFunktion(Arraylist options) {
+
+        Stringbuilder sb = new Stringbuilder();
+
+        for (ArrayList arrayList : ArrayList) {
+
+        }
 
         return input.nextInt();
 

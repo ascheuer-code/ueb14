@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 /**
  * ueb 14 - Dialogklasse
@@ -12,7 +13,15 @@ public class Dialog {
      */
     public static void main(String[] args) {
 
-        new Lib_Dialog().start(options);
+        ArrayList<String> menue = new Arraylist();
+
+        menue.add("Mitarbeiter anlegen");
+        menue.add("Raum anlegen");
+        menue.add("Raum reservieren");
+        menue.add("Raum reservierungen anzeigen");
+        menue.add("Anzahl der reservierungen anzeigen");
+
+        new Lib_Dialog().start(menue);
 
         Mitarbeiter m = new Mitarbeiter("Max", "Mustermann", "max@htwsaar.de");
 
