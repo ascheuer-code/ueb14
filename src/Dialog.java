@@ -1,3 +1,4 @@
+
 /**
  * ueb 14 - Dialogklasse
  * 
@@ -10,6 +11,9 @@ public class Dialog {
      * @param args
      */
     public static void main(String[] args) {
+
+        new Lib_Dialog().start(options);
+
         Mitarbeiter m = new Mitarbeiter("Max", "Mustermann", "max@htwsaar.de");
 
         Uhrzeit u = new Uhrzeit(23, 54);
