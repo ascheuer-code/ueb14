@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Lib_Dialog {
 
-    private static final int ENDE = 0;
+    private static final int ENDE = 6;
     private int option = -1;
     private Raum neuerRaum;
     private Mitarbeiter mitarbeiter;
@@ -137,7 +137,7 @@ public class Lib_Dialog {
         Mitarbeiter mitarbeiter = mitarbeiterliste.get(mitarbeiterNr - 1);
 
         System.out.print("\nBeginn Uhrzeit:");
-        System.out.print("\n1Stunde:");
+        System.out.print("\nStunde:");
         int stundeBeginn = input.nextInt();
         System.out.print("\nMinute:");
         int minuteBeginn = input.nextInt();

@@ -32,13 +32,6 @@ public class Raum {
     }
 
     /**
-     * Standardkkonstruktor
-     */
-    public Raum() {
-
-    }
-
-    /**
      * Methode zum Hinzufügen einer Reservierung
      * 
      * @param reservierung Objekt der Klasse Reservierung

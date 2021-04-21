@@ -21,6 +21,7 @@ public class Dialog {
         menue.add("Raum reservieren");
         menue.add("Raum reservierungen anzeigen");
         menue.add("Anzahl der reservierungen anzeigen");
+        menue.add("Ende");
 
         new Lib_Dialog(menue).start(menue);
 

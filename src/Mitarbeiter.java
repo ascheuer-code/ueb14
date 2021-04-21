@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 /**
  * ueb 14 - Klasse für Mitarbeiter, erbt von Klasse Person
  * 
@@ -22,13 +20,6 @@ public class Mitarbeiter extends Person {
     Mitarbeiter(String vorname, String nachnahme, String email) {
         super(vorname, nachnahme);
         setEmail(email);
-
-    }
-
-    /**
-     * Standardkonstruktor
-     */
-    Mitarbeiter() {
 
     }
 
