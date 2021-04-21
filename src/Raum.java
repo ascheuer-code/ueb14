@@ -14,6 +14,7 @@ public class Raum {
     private int raum;
 
     private ArrayList<Reservierung> reservierung;
+    private ArrayList<Raum> raeume;
 
     /**
      * Konstruktor mit 3 Parametern
@@ -28,6 +29,13 @@ public class Raum {
         this.etage = etage;
         this.raum = raum;
         this.reservierung = new ArrayList<>();
+
+    }
+
+    /**
+     * Standardkkonstruktor
+     */
+    public Raum() {
 
     }
 
@@ -100,6 +108,18 @@ public class Raum {
     public int getAnzahlReservierungen() {
 
         return Lib_Arrays.countIndex(reservierung.toArray());
+    }
+
+    public void addRaum(Raum raum){
+        raeume.add(raum);
+    }
+
+    public ArrayList<Raum> getRaumListe(){
+        return raeume;
+    }
+
+    public ArrayList<Reservierung> getReservierungsListe(){
+        return reservierung;
     }
 
     /**

@@ -6,6 +6,7 @@ import java.util.ArrayList;
  * @author Simon Klasen & Andreas Scheuer
  * @version 0.1
  */
+    
 public class Dialog {
 
     /**
@@ -23,7 +24,7 @@ public class Dialog {
 
         new Lib_Dialog().start(menue);
 
-        Mitarbeiter m = new Mitarbeiter("Max", "Mustermann", "max@htwsaar.de");
+        Mitarbeiter mitarbeiter = new Mitarbeiter("Max", "Mustermann", "max@htwsaar.de");
 
         Uhrzeit u = new Uhrzeit(23, 54);
 
