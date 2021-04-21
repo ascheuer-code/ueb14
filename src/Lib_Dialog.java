@@ -54,9 +54,6 @@ public class Lib_Dialog {
         sb.append("\nBitte wählen sie eine Option\n");
         System.out.print(sb);
 
-        // if (arraylist.equals(raeume)) {
-        // return 1;
-        // }
         return input.nextInt();
 
     }
@@ -87,23 +84,4 @@ public class Lib_Dialog {
 
     }
 
-    public void mitarbeiterAnlegen() {
-
-    }
-
-    public void raumAnlegen() {
-
-    }
-
-    public void raumReservieren() {
-
-    }
-
-    public void reservierungenAnzeigen() {
-
-    }
-
-    public void anzahlReservierungenAnzeigen() {
-
-    }
 }
