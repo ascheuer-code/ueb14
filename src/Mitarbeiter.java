@@ -9,7 +9,6 @@ import java.util.ArrayList;
 public class Mitarbeiter extends Person {
 
     private String email;
-    private ArrayList<Mitarbeiter> mitarbeiterliste;
 
     /**
      * Konstruktor mit 3 Parametern
@@ -66,14 +65,6 @@ public class Mitarbeiter extends Person {
 
         Lib_String.checkIfNullOrEmpty(email, "email");
         this.email = Lib_String.RemoveAllWhitespaces(email);
-    }
-
-    public void addMitarbeiter(Mitarbeiter mitarbeiter){
-        mitarbeiterliste.add(mitarbeiter);
-    }
-
-    public ArrayList<Mitarbeiter> getMitarbeiterListe(){
-        return mitarbeiterliste;
     }
 
     /**

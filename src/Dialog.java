@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * @author Simon Klasen & Andreas Scheuer
  * @version 0.1
  */
-    
+
 public class Dialog {
 
     /**
@@ -22,7 +22,7 @@ public class Dialog {
         menue.add("Raum reservierungen anzeigen");
         menue.add("Anzahl der reservierungen anzeigen");
 
-        new Lib_Dialog().start(menue);
+        new Lib_Dialog(menue).start(menue);
 
         Mitarbeiter mitarbeiter = new Mitarbeiter("Max", "Mustermann", "max@htwsaar.de");
 

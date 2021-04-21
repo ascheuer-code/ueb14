@@ -8,13 +8,20 @@ public class Lib_Dialog {
     private int option = -1;
     private Raum neuerRaum;
     private Mitarbeiter mitarbeiter;
+    private ArrayList<Mitarbeiter> mitarbeiterliste;
+    private ArrayList<Raum> raeume;
+    private ArrayList<?> menue;
 
     // private Arraylist<Mitarbeiter> mitarbeiterListe;
 
     private Scanner input;
 
-    public Lib_Dialog() {
+    public <T> Lib_Dialog(ArrayList<T> menue) {
         input = new Scanner(System.in);
+
+        menue = new ArrayList<T>(menue);
+        mitarbeiterliste = new ArrayList<Mitarbeiter>();
+        raeume = new ArrayList<Raum>();
 
     }
 
@@ -39,7 +46,7 @@ public class Lib_Dialog {
         }
     }
 
-    public <T> int einlesenFunktion(ArrayList <T> arraylist) {
+    public <T> int einlesenFunktion(ArrayList<T> arraylist) {
 
         StringBuilder sb = new StringBuilder();
         int optioncounter = 0;
@@ -53,26 +60,34 @@ public class Lib_Dialog {
         sb.append("\nBitte wählen sie eine Option\n");
         System.out.print(sb);
 
+        if (arraylist.equals(raeume)) {
+            return 1;
+        }
         return input.nextInt();
 
     }
 
-
     public void ausfuehrenFunktion(int option) {
 
         switch (option) {
-        case 0: 
+        case 0:
             System.out.println("Ende");
+            break;
         case 1:
             mitarbeiterAnlegen();
+            break;
         case 2:
             raumAnlegen();
+            break;
         case 3:
             raumReservieren();
+            break;
         case 4:
             reservierungenAnzeigen();
+            break;
         case 5:
             anzahlReservierungenAnzeigen();
+            break;
 
         }
 
@@ -87,9 +102,9 @@ public class Lib_Dialog {
         System.out.print("\nE-Mail: ");
         String email = input.nextLine();
 
-        Mitarbeiter m = new Mitarbeiter(vorname, nachname, email);
-        m.addMitarbeiter(m);
-        System.out.println(String.format("%s wurde angelegt", m.toString()));
+        Mitarbeiter mitarbeiter = new Mitarbeiter(vorname, nachname, email);
+        mitarbeiterliste.add(mitarbeiter);
+        System.out.println(String.format("%s wurde angelegt", mitarbeiter.toString()));
         System.out.println();
     }
 
@@ -103,7 +118,7 @@ public class Lib_Dialog {
         int raum = input.nextInt();
 
         Raum neuerRaum = new Raum(gebäude, etage, raum);
-        neuerRaum.addRaum(neuerRaum);
+        raeume.add(neuerRaum);
         System.out.println(String.format("%s wurde angelegt", neuerRaum.toString()));
         System.out.println();
     }
@@ -112,14 +127,14 @@ public class Lib_Dialog {
         input.nextLine();
         System.out.println("Raeume:");
 
-        int raumNr = einlesenFunktion(new Raum().getRaumListe());        
-        Raum raum = neuerRaum.getRaumListe().get(raumNr - 1);
+        int raumNr = einlesenFunktion(raeume);
+        Raum raum = raeume.get(raumNr - 1);
 
         input.nextLine();
         System.out.println("Mitarbeiter:");
 
-        int mitarbeiterNr = einlesenFunktion(mitarbeiter.getMitarbeiterListe());        
-        Mitarbeiter neuerMitarbeiter = mitarbeiter.getMitarbeiterListe().get(mitarbeiterNr - 1);
+        int mitarbeiterNr = einlesenFunktion(mitarbeiterliste);
+        Mitarbeiter mitarbeiter = mitarbeiterliste.get(mitarbeiterNr - 1);
 
         System.out.print("Beginn Uhrzeit:\n");
         System.out.print("Stunde:\n");
@@ -128,7 +143,7 @@ public class Lib_Dialog {
         int minuteBeginn = input.nextInt();
 
         Uhrzeit beginn = new Uhrzeit(stundeBeginn, minuteBeginn);
-        
+
         System.out.print("Ende Uhrzeit:\n");
         System.out.print("\nStunde:");
         int stundeEnde = input.nextInt();
@@ -136,23 +151,26 @@ public class Lib_Dialog {
         int minuteEnde = input.nextInt();
 
         Uhrzeit ende = new Uhrzeit(stundeEnde, minuteEnde);
-        
+
+        input.nextLine();
+
         System.out.print("\nBemerkung:");
         String bemerkung = input.nextLine();
-        
-        
-        neuerMitarbeiter.reserviere(raum, beginn, ende, bemerkung);
+
+        mitarbeiter.reserviere(raum, beginn, ende, bemerkung);
     }
 
     public void reservierungenAnzeigen() {
 
-         neuerRaum.getReservierungsListe().toArray();    
-            
-        
+        einlesenFunktion(raeume);
+
     }
 
     public void anzahlReservierungenAnzeigen() {
-        System.out.println("Anzahl der Reservierungen: " + neuerRaum.getAnzahlReservierungen());
-        System.out.println();
+        for (Object object : raeume) {
+
+            System.out.println(neuerRaum.getAnzahlReservierungen());
+
+        }
     }
 }
