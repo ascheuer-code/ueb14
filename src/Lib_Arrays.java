@@ -30,10 +30,10 @@ public class Lib_Arrays {
      * @param array zu prüfendes Array
      * @param index eintrag im Array
      */
-    public static void checkNullPointer(Object[] array, int index) {
+    public static int checkNullPointer(Object[] array, int index) {
 
         if (array[index] != null) {
-            return;
+            return index;
         }
         throw new NullPointerException(Lib_Message.errorNullPointerArray(index));
 

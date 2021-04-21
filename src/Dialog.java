@@ -26,6 +26,7 @@ public class Dialog {
         menue = new ArrayList<>();
         mitarbeiterliste = new ArrayList<Mitarbeiter>();
         raumliste = new ArrayList<Raum>();
+
     }
 
     public void start() {
@@ -57,7 +58,7 @@ public class Dialog {
         String email = input.nextLine();
 
         Mitarbeiter mitarbeiter = new Mitarbeiter(vorname, nachname, email);
-        mitarbeiterliste.add(mitarbeiter);
+        this.mitarbeiterliste.add(mitarbeiter);
         System.out.println(String.format("%s wurde angelegt", mitarbeiter.toString()));
         System.out.println();
     }
