@@ -136,10 +136,10 @@ public class Lib_Dialog {
         int mitarbeiterNr = einlesenFunktion(mitarbeiterliste);
         Mitarbeiter mitarbeiter = mitarbeiterliste.get(mitarbeiterNr - 1);
 
-        System.out.print("Beginn Uhrzeit:\n");
-        System.out.print("Stunde:\n");
+        System.out.print("\nBeginn Uhrzeit:");
+        System.out.print("\n1Stunde:");
         int stundeBeginn = input.nextInt();
-        System.out.print("Minute:\n");
+        System.out.print("\nMinute:");
         int minuteBeginn = input.nextInt();
 
         Uhrzeit beginn = new Uhrzeit(stundeBeginn, minuteBeginn);
@@ -147,7 +147,7 @@ public class Lib_Dialog {
         System.out.print("Ende Uhrzeit:\n");
         System.out.print("\nStunde:");
         int stundeEnde = input.nextInt();
-        System.out.print("\nMinute:\n");
+        System.out.print("\nMinute:");
         int minuteEnde = input.nextInt();
 
         Uhrzeit ende = new Uhrzeit(stundeEnde, minuteEnde);
@@ -167,9 +167,10 @@ public class Lib_Dialog {
     }
 
     public void anzahlReservierungenAnzeigen() {
-        for (Object object : raeume) {
+        for (Raum raum : raeume) {
 
-            System.out.println(neuerRaum.getAnzahlReservierungen());
+            System.out.println(String.format("Anzahl an Reservierungen:%d für %s", raum.getAnzahlReservierungen(),
+                    raum.toString()));
 
         }
     }
