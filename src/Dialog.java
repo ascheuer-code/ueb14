@@ -13,7 +13,7 @@ public class Dialog {
      */
     public static void main(String[] args) {
 
-        ArrayList<String> menue = new Arraylist();
+        ArrayList<String> menue = new ArrayList<String>();
 
         menue.add("Mitarbeiter anlegen");
         menue.add("Raum anlegen");
