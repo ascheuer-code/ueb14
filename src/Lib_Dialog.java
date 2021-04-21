@@ -11,12 +11,6 @@ public class Lib_Dialog {
 
     // private Arraylist<Mitarbeiter> mitarbeiterListe;
 
-    public Lib_Dialog() {
-
-        new Dialog().start();
-
-    }
-
     /**
      * Eigentliche Startmethode
      */
@@ -65,9 +59,6 @@ public class Lib_Dialog {
     public void ausfuehrenFunktion(int option) {
 
         switch (option) {
-        case 0:
-            System.out.println("Ende");
-            break;
         case 1:
             dialog.case1();
             break;
