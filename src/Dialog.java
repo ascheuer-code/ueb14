@@ -79,15 +79,16 @@ public class Dialog {
     }
 
     public void case3() {
-        System.out.println("Raeume:");
 
-        int raumNr = Lib_Dialog.einlesenFunktion(raumliste);
+        System.out.println("Raeume:");
+        Lib_Dialog.printMenue(raumliste);
+        int raumNr = Lib_Dialog.chooseOption();
         Raum raum = raumliste.get(Lib_Arrays.checkNullPointer(raumliste.toArray(), raumNr - 1));
 
         input.nextLine();
         System.out.println("Mitarbeiter:");
-
-        int mitarbeiterNr = Lib_Dialog.einlesenFunktion(mitarbeiterliste);
+        Lib_Dialog.printMenue(mitarbeiterliste);
+        int mitarbeiterNr = Lib_Dialog.chooseOption();
         Mitarbeiter mitarbeiter = mitarbeiterliste
                 .get(Lib_Arrays.checkNullPointer(mitarbeiterliste.toArray(), raumNr - 1));
 
@@ -108,7 +109,6 @@ public class Dialog {
         Uhrzeit ende = new Uhrzeit(stundeEnde, minuteEnde);
 
         input.nextLine();
-
         System.out.print("\nBemerkung:");
         String bemerkung = input.nextLine();
 
@@ -116,7 +116,7 @@ public class Dialog {
     }
 
     public void case4() {
-        Lib_Dialog.einlesenFunktion(raumliste);
+        Lib_Dialog.printMenue(raumliste);
     }
 
     public void case5() {

@@ -27,7 +27,8 @@ public class Lib_Dialog {
 
         while (option != ENDE) {
             try {
-                option = einlesenFunktion(menue);
+                printMenue(menue);
+                option = chooseOption();
                 ausfuehrenFunktion(option);
             } catch (IllegalArgumentException msg) {
                 System.out.println("\n" + msg);
@@ -40,7 +41,7 @@ public class Lib_Dialog {
         }
     }
 
-    public static <T> int einlesenFunktion(ArrayList<T> arraylist) {
+    public static <T> void printMenue(ArrayList<T> arraylist) {
 
         StringBuilder sb = new StringBuilder();
         int optioncounter = 0;
@@ -51,11 +52,14 @@ public class Lib_Dialog {
             sb.append(String.format("%d: %s\n", optioncounter, string));
 
         }
-        sb.append("\nBitte wählen sie eine Option\n");
-        System.out.print(sb);
+        System.out.println(sb);
 
+    }
+
+    public static int chooseOption() {
+
+        System.out.print("\nBitte wählen sie eine Option\n");
         return input.nextInt();
-
     }
 
     public void ausfuehrenFunktion(int option) {
