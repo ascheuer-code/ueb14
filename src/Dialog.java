@@ -81,13 +81,14 @@ public class Dialog {
         System.out.println("Raeume:");
 
         int raumNr = Lib_Dialog.einlesenFunktion(raumliste);
-        Raum raum = raumliste.get(raumNr - 1);
+        Raum raum = raumliste.get(Lib_Arrays.checkNullPointer(raumliste.toArray(), raumNr - 1));
 
         input.nextLine();
         System.out.println("Mitarbeiter:");
 
         int mitarbeiterNr = Lib_Dialog.einlesenFunktion(mitarbeiterliste);
-        Mitarbeiter mitarbeiter = mitarbeiterliste.get(mitarbeiterNr - 1);
+        Mitarbeiter mitarbeiter = mitarbeiterliste
+                .get(Lib_Arrays.checkNullPointer(mitarbeiterliste.toArray(), raumNr - 1));
 
         System.out.print("\nBeginn Uhrzeit:");
         System.out.print("\nStunde:");
