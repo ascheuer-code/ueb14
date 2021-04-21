@@ -24,9 +24,9 @@ public class Raum {
      */
 
     public Raum(int geb, int etage, int raum) {
-        this.geb = geb;
-        this.etage = etage;
-        this.raum = raum;
+        setGeb(geb);
+        setEtage(etage);
+        setRaum(raum);
         this.reservierung = new ArrayList<>();
 
     }
