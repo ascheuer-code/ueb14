@@ -1,4 +1,9 @@
-
+/**
+ * ueb 14 - Klasse für Reservierungen
+ * 
+ * @author Simon Klasen & Andreas Scheuer
+ * @version 0.1
+ */
 public class Reservierung {
 
     private Raum raum;
@@ -7,6 +12,13 @@ public class Reservierung {
     private Uhrzeit beginn;
     private Uhrzeit ende;
 
+    /**
+     * Konstruktor mit 2
+     * 
+     * @param beginn Anfangszeit der Reservierung
+     * @param ende   Ende der Reservierung
+     * 
+     */
     public Reservierung(Uhrzeit beginn, Uhrzeit ende) {
         this.beginn = beginn;
         this.ende = ende;

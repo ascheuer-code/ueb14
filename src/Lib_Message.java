@@ -1,5 +1,5 @@
 /**
- * ube14 Klasse mit statischen Methoden
+ * Klasse mit statischen Methoden
  * 
  * @author Simon Klasen & Andreas Scheuer
  * @version 0.1

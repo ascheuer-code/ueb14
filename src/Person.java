@@ -22,13 +22,6 @@ public class Person {
     }
 
     /**
-     * Standardkonstruktor
-     */
-    Person() {
-
-    }
-
-    /**
      * @return String
      */
     public String getVorname() {

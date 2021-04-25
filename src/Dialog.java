@@ -16,12 +16,12 @@ public class Dialog {
     private Scanner input;
 
     /**
-     * @param args
+     * Konstruktur zum Initialisieren benötigter Elemente
+     * 
      */
 
     public Dialog() {
         input = new Scanner(System.in);
-
         mitarbeiterliste = new ArrayList<Mitarbeiter>();
         raumliste = new ArrayList<Raum>();
 
@@ -31,6 +31,11 @@ public class Dialog {
 
     }
 
+    /**
+     * main Methode
+     * 
+     * @param args
+     */
     public static void main(String[] args) {
 
         ArrayList<String> menue = new ArrayList<String>();
@@ -46,6 +51,11 @@ public class Dialog {
 
     }
 
+    /**
+     * Menuepunkt Mitarbeiter anlegen
+     * 
+     * 
+     */
     public void case1() {
 
         System.out.print("Vorname: ");
@@ -61,6 +71,11 @@ public class Dialog {
 
     }
 
+    /**
+     * Menuepunkt Raum anlegen
+     * 
+     * 
+     */
     public void case2() {
 
         System.out.print("Gebäude: ");
@@ -77,6 +92,11 @@ public class Dialog {
 
     }
 
+    /**
+     * Menuepunkt Raum reservieren
+     * 
+     * 
+     */
     public void case3() {
 
         System.out.println("Raeume:");
@@ -114,10 +134,20 @@ public class Dialog {
         mitarbeiter.reserviere(raum, beginn, ende, bemerkung);
     }
 
+    /**
+     * Menuepunkt Raum reservierungen anzeigen
+     * 
+     * 
+     */
     public void case4() {
         Lib_Dialog.printMenue(raumliste);
     }
 
+    /**
+     * Menuepunkt Anazahl der Reservierungen anzeigen
+     * 
+     * 
+     */
     public void case5() {
 
         for (Raum raum : raumliste) {

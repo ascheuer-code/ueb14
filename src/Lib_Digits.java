@@ -2,16 +2,15 @@
 import java.text.DecimalFormat;
 
 /**
- * ube14 Klasse mit statischen Methoden
+ * Klasse mit statischen Methoden
  * 
  * @author Simon Klasen & Andreas Scheuer
  * @version 0.1
  */
-
 public class Lib_Digits {
 
     /**
-     * Prüft ob sich der Wert sich zwischen zwei Werten befindet
+     * Prüft ob der Wert sich zwischen zwei Werten befindet
      * 
      * @param <T>   beliebige Zahl
      * @param <K>   beliebiger String
@@ -28,7 +27,7 @@ public class Lib_Digits {
     }
 
     /**
-     * Prüft ob sich der Wert über dem min befindet
+     * Prüft ob der Wert sich über dem min befindet
      * 
      * @param <T>    beliebige Zahl
      * @param <K>    beliebiger String
