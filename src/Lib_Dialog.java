@@ -46,13 +46,12 @@ public class Lib_Dialog {
             sb.append(String.format("%d: %s\n", optioncounter, string));
 
         }
-        System.out.println(sb);
+        System.out.print(sb);
 
     }
 
     public static int chooseOption() {
-
-        System.out.print("\nBitte wählen sie eine Option\n");
+        System.out.println("\nBitte wählen sie eine Option");
         return input.nextInt();
     }
 

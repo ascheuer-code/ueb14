@@ -10,11 +10,9 @@ import java.util.Scanner;
 
 public class Dialog {
 
-    private Raum raum;
-    private Mitarbeiter mitarbeiter;
     private ArrayList<Mitarbeiter> mitarbeiterliste;
     private ArrayList<Raum> raumliste;
-    private ArrayList<?> menue;
+
     private Scanner input;
 
     /**
@@ -23,7 +21,7 @@ public class Dialog {
 
     public Dialog() {
         input = new Scanner(System.in);
-        menue = new ArrayList<>();
+
         mitarbeiterliste = new ArrayList<Mitarbeiter>();
         raumliste = new ArrayList<Raum>();
 
@@ -59,8 +57,8 @@ public class Dialog {
 
         Mitarbeiter mitarbeiter = new Mitarbeiter(vorname, nachname, email);
         this.mitarbeiterliste.add(mitarbeiter);
-        System.out.println(String.format("%s wurde angelegt", mitarbeiter.toString()));
-        System.out.println();
+        System.out.println(String.format("%s wurde angelegt\n", mitarbeiter.toString()));
+
     }
 
     public void case2() {
@@ -74,8 +72,9 @@ public class Dialog {
 
         Raum raum = new Raum(gebäude, etage, raumNr);
         raumliste.add(raum);
-        System.out.println(String.format("%s wurde angelegt", raum.toString()));
-        System.out.println();
+        System.out.print(String.format("%s wurde angelegt\n", raum.toString()));
+        input.nextLine();
+
     }
 
     public void case3() {
