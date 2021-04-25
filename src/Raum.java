@@ -102,6 +102,9 @@ public class Raum {
         return Lib_Arrays.countIndex(reservierung.toArray());
     }
 
+    /**
+     * @return ArrayList<Reservierung>
+     */
     public ArrayList<Reservierung> getReservierungsListe() {
         return reservierung;
     }
