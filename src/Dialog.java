@@ -104,7 +104,6 @@ public class Dialog {
         int raumNr = Lib_Dialog.chooseOption();
         Raum raum = raumliste.get(Lib_Arrays.checkNullPointer(raumliste.toArray(), raumNr - 1));
 
-        input.nextLine();
         System.out.println("Mitarbeiter:");
         Lib_Dialog.printMenue(mitarbeiterliste);
         int mitarbeiterNr = Lib_Dialog.chooseOption();
