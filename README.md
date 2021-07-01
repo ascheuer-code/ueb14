@@ -1,7 +1,7 @@
 ## 1. Aufgabe
 Gegeben sei folgendes UML Diagramm.
 
-![image](https://user-images.githubusercontent.com/69506130/124186266-5e8df300-dabc-11eb-8260-0ec963ccf6c4.png)
+![image](https://user-images.githubusercontent.com/69506130/124186658-eecc3800-dabc-11eb-9264-8f93bbc6980a.png)
 
 Ergänzend sind Ihnen folgende Hinweise für die Implementierung gegeben. Eine Uhrzeit soll wie
 folgt angelegt werden können:
